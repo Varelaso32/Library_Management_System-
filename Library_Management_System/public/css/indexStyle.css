@@ -1,0 +1,54 @@
+body {
+    background: linear-gradient(to right, #fef6e4, #f3d2c1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #222;
+}
+
+.card-style {
+    background-color: #fff;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+.card-style:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+thead th {
+    background-color: #ff9f1c !important;
+    color: #fff !important;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 1px solid #fff;
+}
+
+
+.table td {
+    vertical-align: middle;
+}
+
+.btn-libreria {
+    background-color: #1982c4;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-libreria:hover {
+    background-color: #1261a0;
+}
+
+.btn-icon {
+    border-radius: 8px;
+    font-size: 1rem;
+    padding: 6px 10px;
+}
+
+.text-muted {
+    font-style: italic;
+    color: #555 !important;
+}
