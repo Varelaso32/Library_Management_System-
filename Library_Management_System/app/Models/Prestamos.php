@@ -12,4 +12,6 @@ class Prestamos extends Model
     protected $table = 'prestamos';         
     protected $primaryKey = 'id';       
     public $timestamps = false; 
+
+    
 }
