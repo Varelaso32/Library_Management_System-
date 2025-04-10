@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PrestamosController;
 use App\Http\Controllers\BooksController;
+use App\Http\Controllers\ReadersController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -35,6 +36,15 @@ Route::middleware('auth')->group(function () {
     Route::get('/books/{book}/edit', [BooksController::class, 'edit'])->name('books.edit');
     Route::put('/books/{book}', [BooksController::class, 'update'])->name('books.update');
     Route::delete('/books/{book}', [BooksController::class, 'destroy'])->name('books.destroy');
+
+    // Rutas para Readers
+    Route::get('/readers', [ReadersController::class, 'index'])->name('readers.index');
+    Route::get('/readers/create', [ReadersController::class, 'create'])->name('readers.create');
+    Route::post('/readers', [ReadersController::class, 'store'])->name('readers.store');
+    Route::get('/readers/{reader}/edit', [ReadersController::class, 'edit'])->name('readers.edit');
+    Route::put('/readers/{reader}', [ReadersController::class, 'update'])->name('readers.update');
+    Route::delete('/readers/{reader}', [ReadersController::class, 'destroy'])->name('readers.destroy');
+
         
 });
 
