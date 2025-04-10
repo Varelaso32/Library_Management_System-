@@ -7,42 +7,7 @@
     <title>Registrar Préstamo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-
-        .card-style {
-            background: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        }
-
-        .btn-libreria {
-            background-color: #0077b6;
-            color: white;
-            border-radius: 8px;
-            padding: 0.4rem 0.8rem;
-        }
-
-        .btn-libreria:hover {
-            background-color: #023e8a;
-        }
-
-        .form-label {
-            font-weight: 500;
-            color: #343a40;
-        }
-
-        h4.text-libreria {
-            color: #0077b6;
-        }
-
-        .form-select,
-        .form-control {
-            border-radius: 8px;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/newStyle.css') }}">
 </head>
 
 <body>
