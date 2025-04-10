@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PrestamosController;
+use App\Http\Controllers\BooksController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -26,6 +27,15 @@ Route::middleware('auth')->group(function () {
     Route::get('/prestamos/{prestamo}/edit', [PrestamosController::class, 'edit'])->name('prestamos.edit');
     Route::put('/prestamos/{prestamo}', [PrestamosController::class, 'update'])->name('prestamos.update');
     Route::delete('/prestamos/{prestamo}', [PrestamosController::class, 'destroy'])->name('prestamos.destroy');
+
+    // Rutas para Books
+    Route::get('/books', [BooksController::class, 'index'])->name('books.index');
+    Route::get('/books/create', [BooksController::class, 'create'])->name('books.create');
+    Route::post('/books', [BooksController::class, 'store'])->name('books.store');
+    Route::get('/books/{book}/edit', [BooksController::class, 'edit'])->name('books.edit');
+    Route::put('/books/{book}', [BooksController::class, 'update'])->name('books.update');
+    Route::delete('/books/{book}', [BooksController::class, 'destroy'])->name('books.destroy');
+        
 });
 
 require __DIR__.'/auth.php';
