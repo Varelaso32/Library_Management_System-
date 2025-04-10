@@ -40,5 +40,42 @@ class ReadersController extends Controller
         return view('readers.index', ['readers' => $readers]);
     }
 
-        
+        public function destroy(string $id)
+    {
+        $reader = Readers::find($id);
+        $reader->delete();
+
+        $readers = DB::table('readers')
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        return view('readers.index', ['readers' => $readers]);
+    }
+
+    public function edit(string $id)
+    {
+        $reader = Readers::find($id);
+
+        return view('readers.edit', ['reader' => $reader]);
+    }
+
+    public function update(Request $request, string $id)
+    {
+        $reader = Readers::find($id);
+
+        $reader->nombre = $request->nombre;
+        $reader->apellido = $request->apellido;
+        $reader->dirección = $request->dirección;
+        $reader->teléfono = $request->teléfono;
+        $reader->email = $request->email;
+
+        $reader->save();
+
+        $readers = DB::table('readers')->get();
+
+        return view('readers.index', ['readers' => $readers]);
+    }
+
+
+            
 }
