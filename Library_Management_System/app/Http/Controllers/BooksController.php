@@ -41,5 +41,43 @@ class BooksController extends Controller
         return view('books.index', ['books' => $books]);
     }
 
+        public function destroy(string $id)
+    {
+        $book = Books::find($id);
+        $book->delete();
+
+        $books = DB::table('books')
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        return view('books.index', ['books' => $books]);
+    }
+
+        public function edit(string $id)
+    {
+        $book = Books::find($id);
+
+        return view('books.edit', ['book' => $book]);
+    }
+
+    public function update(Request $request, string $id)
+    {
+        $book = Books::find($id);
+
+        $book->título = $request->título;
+        $book->autor = $request->autor;
+        $book->isbn = $request->isbn;
+        $book->año_publicación = $request->año_publicación;
+        $book->editorial = $request->editorial;
+
+        $book->save();
+
+        $books = DB::table('books')->get();
+
+        return view('books.index', ['books' => $books]);
+    }
+
+
+
     
 }
