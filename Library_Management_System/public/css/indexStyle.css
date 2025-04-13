@@ -1,0 +1,39 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card-style {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.btn-libreria {
+    background-color: #0077b6;
+    color: white;
+    border-radius: 8px;
+    padding: 0.4rem 0.8rem;
+    font-weight: 500;
+}
+
+.btn-libreria:hover {
+    background-color: #023e8a;
+}
+
+.btn-icon {
+    border-radius: 50%;
+    padding: 0.4rem 0.6rem;
+}
+
+.text-primary {
+    color: #023e8a !important;
+}
+
+table th {
+    background-color: #e3f2fd;
+    color: #023e8a;
+}
+
+h4.text-primary {
+    font-weight: 600;
+}
