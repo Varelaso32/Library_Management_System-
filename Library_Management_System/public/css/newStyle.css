@@ -1,34 +1,35 @@
-body {
-    background-color: #f8f9fa;
+.form-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #6c757d;
+}
+.btn-sm-custom {
+    padding: 6px 16px;
+    font-size: 0.9rem;
+}
+.input-group-icon {
+    position: relative;
+}
+
+.input-group-icon input {
+    padding-left: 2rem;
+}
+
+.input-group-icon input,
+.input-group-icon select {
+    padding-left: 2rem;
+}
+
+.btn-sm-custom {
+    padding: 6px 16px;
+    font-size: 0.9rem;
 }
 
 .card-style {
-    background: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.btn-libreria {
-    background-color: #0077b6;
-    color: white;
-    border-radius: 8px;
-    padding: 0.4rem 0.8rem;
-}
-
-.btn-libreria:hover {
-    background-color: #023e8a;
-}
-
-.form-label {
-    font-weight: 500;
-    color: #343a40;
-}
-
-h4.text-libreria {
-    color: #0077b6;
-}
-
-.form-select,
-.form-control {
-    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    border-radius: 0.75rem;
+    background-color: #fff;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
 }
